@@ -9,10 +9,10 @@ import {
   Pressable,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import products from "../data/products";
+import { useSelector } from "react-redux";
 
 const ProductDetailsScreen = () => {
-  const product = products[0];
+  const product = useSelector((state) => state.products.selectedProduct);
 
   const { width } = useWindowDimensions();
 
